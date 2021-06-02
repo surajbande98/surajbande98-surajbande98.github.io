@@ -1,0 +1,23 @@
+.transaction-date {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 12px;
+    width: 100px;
+
+    .status-bar {
+        width: 6px;
+        height: 70%;
+        background: #E25A2C;
+        margin-right: 10px;
+    }
+
+    .status-bar.primary-green {}
+}
+
+.merchant-details {
+    .transaction-type {
+        font-size: 12px;
+        color: #878E95;
+    }
+}

@@ -1,0 +1,26 @@
+
+.make-transfer-wrapper {
+ 
+    display: flex;
+    background: #fff;
+    width: 330px;
+    border-radius: 12px;
+    flex-direction: column;
+    overflow: hidden;
+
+
+    .make-transfer-header {
+        display: flex;
+        background: #3CA2E0;
+        height: 60px;
+        align-items: center;
+        color: #fff;
+
+        padding-left: 24px;
+
+        .make-transfer-header-title {
+            margin-left: 12px;
+        }
+    }
+    
+}

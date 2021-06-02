@@ -1,0 +1,10 @@
+<div class="transaction-wrapper">
+
+  <app-transfer-money-form (transfterInitiated)="showReviewPage($event)"></app-transfer-money-form>
+
+  <app-review-transfer *ngIf="beneficiaryDetails" [data]="beneficiaryDetails" (moneySend)="sendMoney($event)">
+  </app-review-transfer>
+
+  <app-transactions-list [newTransaction]="addedTransaction"></app-transactions-list>
+
+</div>

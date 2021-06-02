@@ -1,0 +1,27 @@
+<!-- <ng-content select="[data-test-hook='transactionColour']"]></ng-content>
+<ng-content select="[data-test-hook='transactionDate']"]></ng-content>
+<div class="merchant-details">
+  <ng-content select="[data-test-hook='transactionMerchantName']"></ng-content>
+  <ng-content select="[data-test-hook='transactionType']"></ng-content>
+</div>
+<ng-content select="[data-test-hook='transactionAmount']"></ng-content> -->
+
+<ng-container *ngIf="transaction">
+  <div class="transaction-date">
+    <span class="status-bar"
+      [ngClass]="transaction.transaction.creditDebitIndicator == 'CRDT' ? 'primary-bg': 'secondary-red'"></span>
+    {{transaction.dates.valueDate | date:'MMM d'}}
+  </div>
+
+  <div class="merchant-details">
+    <div class="merchant-name"> {{transaction.merchant.name}}</div>
+    <div class="transaction-type"> {{transaction.transaction.type}}</div>
+  </div>
+
+  <div class="amount ml-auto"
+    [ngClass]="transaction.transaction.creditDebitIndicator == 'CRDT' ? 'primary-green': 'secondary-red'">
+    € {{transaction.transaction.creditDebitIndicator == 'CRDT' ?  transaction.transaction.amountCurrency.amount
+  : ('-'+transaction.transaction.amountCurrency.amount)
+  }}
+  </div>
+</ng-container>

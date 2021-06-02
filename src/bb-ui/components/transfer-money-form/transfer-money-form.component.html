@@ -1,0 +1,58 @@
+<div class="make-transfer-wrapper">
+
+  <div class="make-transfer-header">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet2"
+      viewBox="0 0 16 16">
+      <path
+        d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
+    </svg>
+    <div class="make-transfer-header-title">
+      <strong>
+        Make
+      </strong> Transfer
+    </div>
+  </div>
+
+  <div class="make-transfer-body p-20">
+    <form [formGroup]="transferForm" (ngSubmit)="checkValidation()">
+      <div class="form-group">
+        <label for="FromAccount">From Account</label>
+        <input type="text" formControlName="FromAccount" class="form-control" name="FromAccount" id="FromAccount"
+          value="" placeholder="" disabled>
+
+      </div>
+
+      <div class="form-group">
+        <label for="ToAccount">To Account</label>
+        <input type="text" formControlName="ToAccount" class="form-control" name="ToAccount" id="ToAccount"
+          placeholder="type an account name">
+        <div class="feedback-error"
+          *ngIf="(transferForm.controls.ToAccount.errors?.required) && transferForm.controls.ToAccount.invalid && (transferForm.controls.ToAccount.touched)">
+          This field is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="ToAccount">Amount</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">€</div>
+          </div>
+          <input type="text" [ngAutonumeric]="amountConfig" #instance="ngAutonumeric" formControlName="Amount"
+            class="form-control" name="Amount" id="Amount" placeholder="specify the amount">
+        </div>
+        <div class="feedback-error"
+          *ngIf="(transferForm.controls.Amount.errors?.required) && transferForm.controls.Amount.invalid && (transferForm.controls.Amount.touched) && !isEnoughBalance">
+          Fill-in the field
+        </div>
+        <div class="feedback-error"
+          *ngIf="(transferForm.controls.Amount.errors?.InsufficientBalance) && transferForm.controls.Amount.invalid && (transferForm.controls.Amount.touched)">
+          There is not enough balance
+        </div>
+      </div>
+
+      <app-submit-button></app-submit-button>
+    </form>
+  </div>
+
+</div>

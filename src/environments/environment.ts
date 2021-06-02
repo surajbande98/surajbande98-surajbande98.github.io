@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  amountConfig: {
+    digitGroupSeparator: ',',
+    decimalCharacter: '.',
+    decimalCharacterAlternative: '.',
+    currencySymbol: '',
+    currencySymbolPlacement: 's',
+    minimumValue: '0',
+    modifyValueOnWheel: false
+  }
 };
 
 /*

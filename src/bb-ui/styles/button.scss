@@ -1,0 +1,22 @@
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.btn-primary {
+    color: $primary-white;
+    background-color: $primary-orange;
+    border-color: $primary-orange; 
+
+    &:hover, &:active, &:focus {
+        color: $primary-white !important;
+        background-color: $primary-orange !important;
+        border-color: $primary-orange !important; 
+    }
+}
+
+.btn-secondary {
+    border: 1px solid #161616;
+    background: $primary-white;
+    color: #565C61;
+}

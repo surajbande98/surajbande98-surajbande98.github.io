@@ -1,0 +1,33 @@
+@import './vars';
+
+.primary-color {
+    color: $primary-blue;
+}
+
+.primary-orange {
+    color: $primary-orange;
+}
+
+.primary-white {
+    color: $primary-white;
+}
+
+.primary-grey {
+    color: $primary-grey;
+}
+
+.primary-red {
+    color: $primary-red;
+}
+
+.primary-green {
+    color: $primary-green;
+}
+
+.secondary-red {
+    color: $secondary-red;
+}
+
+.primary-bg {
+    background: $primary-green !important;
+}

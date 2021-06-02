@@ -1,0 +1,33 @@
+input.form-control {
+    border: 1px solid #cacaca;
+    font-size: 14px;
+
+    &:focus {
+        outline: 0;
+        border-color: #161616;
+        box-shadow: none;
+    }
+
+    &:disabled {
+        background-color: #E9ECEF;
+    }
+}
+
+.input-group {
+    .input-group-text {
+        padding: 0px 10px;
+        font-size: 14px;
+    }
+}
+
+.feedback-error {
+    color: $primary-red;
+    font-size: 12px;
+}
+
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 1px solid $primary-red;
+}

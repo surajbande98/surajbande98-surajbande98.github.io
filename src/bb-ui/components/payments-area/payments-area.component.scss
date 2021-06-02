@@ -1,0 +1,17 @@
+.transaction-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1200px;
+    margin: auto;
+
+    app-transfer-money-form {
+        flex: 1 0 0;
+        margin: 10px;
+    }
+
+    app-transactions-list {
+        flex: 3 0 0;
+        margin: 10px;
+    }
+}

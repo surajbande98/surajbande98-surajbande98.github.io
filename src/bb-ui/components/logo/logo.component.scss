@@ -1,0 +1,19 @@
+@import '../../styles/vars.scss';
+
+.logo {
+  width: 1200px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  background: #ffffff;
+
+  img {
+    height: 30px;
+  }
+
+  .header-title {
+    color: $primary-blue;
+  }
+}

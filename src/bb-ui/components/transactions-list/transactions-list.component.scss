@@ -1,0 +1,38 @@
+.transaction-list-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .transaction-list-header {
+        display: flex;
+        background: #3CA2E0;
+        height: 60px;
+        align-items: center;
+        color: #fff;
+
+        padding-left: 24px;
+
+        .transaction-list-header-title {
+            margin-left: 12px;
+        }
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .transactions-wrapper {
+
+        // max-height: 500px;
+        // overflow-y: scroll;
+
+        app-transaction-item {
+            display: flex;
+            height: 100px;
+            border-bottom: 1px solid #e0e0e0;
+            align-items: center;
+            padding-right: 10px;
+        }
+    }
+}

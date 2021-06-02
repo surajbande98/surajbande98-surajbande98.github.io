@@ -1,0 +1,31 @@
+<div class="modal" tabindex="-1" role="dialog" id="ReviewTransferModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <strong> Review</strong> Transfer
+          </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" *ngIf="data">
+        <p><i>Are you ready you send out this transfer?</i></p>
+
+        <strong>It will be send to account:</strong>
+
+        <div  class="mb-20 mt-6">{{data.name}}</div>
+
+        <strong>With the amount of:</strong>
+
+        <div>€ {{data.amount}}</div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="sendMoney()">Send transfer</button>
+      </div>
+    </div>
+  </div>
+</div>
